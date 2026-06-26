@@ -3,6 +3,14 @@ if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
+if (window.lucide) {
+  window.lucide.createIcons({
+    attrs: {
+      'stroke-width': 1.8
+    }
+  });
+}
+
 const revealElements = document.querySelectorAll('.reveal');
 
 if ('IntersectionObserver' in window) {
