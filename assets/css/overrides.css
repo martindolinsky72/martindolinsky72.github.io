@@ -1,0 +1,26 @@
+html {
+  scroll-padding-top: 78px;
+}
+
+.section {
+  scroll-margin-top: 78px;
+}
+
+.nav a::before {
+  left: 0;
+  right: 0;
+  bottom: -13px;
+  width: auto;
+  height: 2px;
+  border-radius: 999px;
+  transform: scaleX(0.35);
+}
+
+.nav a.is-active::before {
+  transform: scaleX(1);
+}
+
+.flow-icon {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
