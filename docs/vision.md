@@ -29,6 +29,19 @@ Najprv sa hľadá skutočný problém a až potom sa vyberá nástroj. Niekedy j
 
 > Technológie majú ľuďom šetriť čas, nie pridávať ďalšiu prácu.
 
+## Pravidlo 15 sekúnd
+
+Ak návštevník po 15 sekundách nevie povedať, čo Martin robí a či mu vie pomôcť, stránka zlyhala.
+
+Každá sekcia musí pomáhať rýchlo pochopiť:
+
+- aký problém rieši,
+- pre koho je riešenie relevantné,
+- prečo je Martin dôveryhodný partner,
+- aký ďalší krok má návštevník urobiť.
+
+Toto pravidlo chráni web pred tým, aby sa časom zmenil na preplnený katalóg technológií, certifikátov a textov bez jasnej hodnoty pre klienta.
+
 ## Dlhodobý cieľ
 
 Web nemá byť iba vizitkou. Má byť dlhodobo rozširovateľnou platformou osobnej značky:
