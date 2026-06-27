@@ -24,3 +24,21 @@ html {
   font-size: 13px;
   letter-spacing: 0.08em;
 }
+
+.flow-result strong {
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+.footer-inner p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+  font-weight: 700;
+}
