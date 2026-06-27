@@ -290,7 +290,7 @@ h3 {
   padding: 20px 22px;
   border: 1px solid var(--color-border);
   border-radius: 22px;
-  background: var(--color-sand);
+  background: rgba(255, 255, 255, 0.62);
   color: var(--color-text);
 }
 
@@ -386,6 +386,37 @@ h3 {
 .thinking-text strong,
 .about-text strong {
   color: var(--color-text);
+}
+
+.about-grid {
+  align-items: start;
+}
+
+.about-heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.about-photo {
+  margin-top: 36px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about-photo img {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transform: translateX(-10px);
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.08));
+  transition: transform var(--transition), filter var(--transition);
+}
+
+.about-photo img:hover {
+  transform: translateX(-10px) translateY(-3px);
+  filter: drop-shadow(0 24px 42px rgba(0, 0, 0, 0.10));
 }
 
 .solution-strip,
@@ -568,6 +599,24 @@ h3 {
   .thinking-text,
   .about-text {
     font-size: 17px;
+  }
+
+  .about-heading {
+    margin-bottom: 0;
+  }
+
+  .about-photo {
+    margin-top: 28px;
+    justify-content: center;
+  }
+
+  .about-photo img {
+    width: 240px;
+    transform: none;
+  }
+
+  .about-photo img:hover {
+    transform: translateY(-3px);
   }
 
   .hero-actions {
