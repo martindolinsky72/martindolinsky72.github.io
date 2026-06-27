@@ -217,22 +217,6 @@ h3 {
   border-color: var(--color-primary);
 }
 
-.hero-text-link {
-  display: inline-flex;
-  align-items: center;
-  min-height: 48px;
-  color: var(--color-primary);
-  font-size: 15px;
-  font-weight: 800;
-  transition: color var(--transition), transform var(--transition);
-}
-
-.hero-text-link:hover {
-  color: var(--color-primary-hover);
-  transform: translateX(2px);
-}
-
-
 .hero-note {
   margin: 26px 0 0;
   color: var(--color-text-secondary);
@@ -303,16 +287,17 @@ h3 {
 
 .flow-result {
   margin-top: 24px;
-  padding: 22px;
+  padding: 20px 22px;
+  border: 1px solid var(--color-border);
   border-radius: 22px;
-  background: var(--color-primary);
-  color: var(--color-bg);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--color-text);
 }
 
 .flow-result span {
   display: block;
   margin-bottom: 8px;
-  color: rgba(250, 248, 244, 0.72);
+  color: var(--color-primary);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -321,6 +306,7 @@ h3 {
 
 .flow-result strong {
   display: block;
+  color: var(--color-text);
   font-size: 18px;
   line-height: 1.35;
   letter-spacing: -0.025em;
@@ -358,8 +344,6 @@ h3 {
 .case-card {
   padding: 26px;
 }
-
-/* Cards are informational, not clickable. Hover states are reserved for real actions. */
 
 .card p,
 .case-card p {
@@ -505,11 +489,13 @@ h3 {
 
 .footer-inner p {
   max-width: 720px;
-  margin: 0 auto 26px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 26px;
+  color: var(--color-text);
   font-size: clamp(22px, 3vw, 32px);
   line-height: 1.22;
   letter-spacing: -0.04em;
-  color: var(--color-text);
   font-weight: 700;
 }
 
