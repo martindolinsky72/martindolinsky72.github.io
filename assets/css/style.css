@@ -290,7 +290,7 @@ h3 {
   padding: 20px 22px;
   border: 1px solid var(--color-border);
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.62);
+  background: var(--color-sand);
   color: var(--color-text);
 }
 
@@ -388,35 +388,62 @@ h3 {
   color: var(--color-text);
 }
 
-.about-grid {
-  align-items: start;
+.about-section {
+  position: relative;
+  overflow: hidden;
 }
 
-.about-heading {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0;
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.78fr);
+  gap: clamp(42px, 7vw, 92px);
+  align-items: center;
+}
+
+.about-content {
+  max-width: 720px;
+}
+
+.about-content h2 {
+  max-width: 640px;
+  margin-bottom: 30px;
+}
+
+.about-text {
+  max-width: 700px;
 }
 
 .about-photo {
-  margin-top: 36px;
+  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  align-self: end;
+}
+
+.about-photo::before {
+  content: "";
+  position: absolute;
+  right: 4%;
+  bottom: 4%;
+  width: min(92%, 420px);
+  aspect-ratio: 1;
+  border-radius: 48% 52% 44% 56%;
+  background: radial-gradient(circle at 45% 45%, rgba(234, 220, 200, 0.72), rgba(221, 232, 223, 0.42) 55%, transparent 72%);
+  z-index: -1;
 }
 
 .about-photo img {
-  width: 320px;
-  max-width: 100%;
-  height: auto;
+  width: min(100%, 420px);
+  max-height: 560px;
+  object-fit: contain;
   display: block;
-  transform: translateX(-10px);
-  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.10));
   transition: transform var(--transition), filter var(--transition);
 }
 
 .about-photo img:hover {
-  transform: translateX(-10px) translateY(-3px);
-  filter: drop-shadow(0 24px 42px rgba(0, 0, 0, 0.10));
+  transform: translateY(-3px);
+  filter: drop-shadow(0 32px 56px rgba(0, 0, 0, 0.12));
 }
 
 .solution-strip,
@@ -557,6 +584,15 @@ h3 {
     gap: 40px;
   }
 
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .about-photo {
+    justify-content: center;
+  }
+
   .challenge-grid,
   .case-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -601,22 +637,30 @@ h3 {
     font-size: 17px;
   }
 
-  .about-heading {
-    margin-bottom: 0;
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .about-content h2 {
+    margin-bottom: 24px;
   }
 
   .about-photo {
-    margin-top: 28px;
     justify-content: center;
+    order: -1;
+  }
+
+  .about-photo::before {
+    right: 50%;
+    bottom: 0;
+    width: 280px;
+    transform: translateX(50%);
   }
 
   .about-photo img {
-    width: 240px;
-    transform: none;
-  }
-
-  .about-photo img:hover {
-    transform: translateY(-3px);
+    width: min(82vw, 300px);
+    max-height: none;
   }
 
   .hero-actions {
