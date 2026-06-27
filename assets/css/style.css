@@ -428,7 +428,6 @@ h3 {
   width: min(92%, 420px);
   aspect-ratio: 1;
   border-radius: 48% 52% 44% 56%;
-  background: radial-gradient(circle at 45% 45%, rgba(234, 220, 200, 0.72), rgba(221, 232, 223, 0.42) 55%, transparent 72%);
   z-index: -1;
 }
 
