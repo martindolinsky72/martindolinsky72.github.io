@@ -4,7 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 92px;
+  scroll-padding-top: 78px;
 }
 
 body {
@@ -28,7 +28,7 @@ a {
 
 .section {
   padding: 92px 0;
-  scroll-margin-top: 92px;
+  scroll-margin-top: 78px;
 }
 
 .section-muted {
@@ -90,14 +90,16 @@ a {
 .nav a::before {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -12px;
-  width: 5px;
-  height: 5px;
+  left: 0;
+  right: 0;
+  bottom: -13px;
+  width: auto;
+  height: 2px;
   border-radius: 999px;
   background: var(--color-primary);
   opacity: 0;
-  transform: translateX(-50%) scale(0.6);
+  transform: scaleX(0.35);
+  transform-origin: center;
   transition: opacity var(--transition), transform var(--transition);
 }
 
@@ -108,7 +110,7 @@ a {
 
 .nav a.is-active::before {
   opacity: 1;
-  transform: translateX(-50%) scale(1);
+  transform: scaleX(1);
 }
 
 .hero {
@@ -215,6 +217,22 @@ h3 {
   border-color: var(--color-primary);
 }
 
+.hero-text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--color-primary);
+  font-size: 15px;
+  font-weight: 800;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.hero-text-link:hover {
+  color: var(--color-primary-hover);
+  transform: translateX(2px);
+}
+
+
 .hero-note {
   margin: 26px 0 0;
   color: var(--color-text-secondary);
@@ -271,8 +289,9 @@ h3 {
   border-radius: 18px;
   background: var(--color-sage);
   color: var(--color-primary);
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .flow-line {
@@ -302,9 +321,10 @@ h3 {
 
 .flow-result strong {
   display: block;
-  font-size: 21px;
-  line-height: 1.2;
-  letter-spacing: -0.04em;
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 
 .panel-card,
@@ -337,15 +357,9 @@ h3 {
 .card,
 .case-card {
   padding: 26px;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
-.card:hover,
-.case-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(21, 50, 67, 0.28);
-  box-shadow: var(--shadow-hover);
-}
+/* Cards are informational, not clickable. Hover states are reserved for real actions. */
 
 .card p,
 .case-card p {
@@ -490,8 +504,13 @@ h3 {
 }
 
 .footer-inner p {
-  margin-bottom: 26px;
-  color: var(--color-text-secondary);
+  max-width: 720px;
+  margin: 0 auto 26px;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+  font-weight: 700;
 }
 
 .footer-inner small {
@@ -507,6 +526,11 @@ h3 {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+#vyzvy,
+#riesenia {
+  padding-top: 64px;
 }
 
 @media (max-width: 920px) {
