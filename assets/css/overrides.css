@@ -42,3 +42,11 @@ html {
   color: var(--color-text);
   font-weight: 700;
 }
+
+#vyzvy {
+    padding-top: 64px;
+}
+
+#riesenia {
+    padding-top: 64px;
+}
